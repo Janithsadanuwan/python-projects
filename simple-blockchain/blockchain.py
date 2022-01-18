@@ -39,16 +39,3 @@ class Blockchain:
     @property
     def last_block(self):
         return self.chain[-1]
-
-blockchain = Blockchain()
-t1 = blockchain.new_transaction('Lucas', 'José', 100)
-t2 = blockchain.new_transaction('José', 'Lucas', 50)
-t3 = blockchain.new_transaction('Lucas', 'José', 25)
-blockchain.new_block(proof=23334)
-
-t4 = blockchain.new_transaction('José', 'Lucas', 35)
-t5 = blockchain.new_transaction('Lucas', 'José', 40)
-t6 = blockchain.new_transaction('José', 'Lucas', 15)
-blockchain.new_block(proof=22321)
-
-print(blockchain.chain)
